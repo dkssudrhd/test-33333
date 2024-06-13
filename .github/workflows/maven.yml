@@ -39,8 +39,8 @@ jobs:
     - name: upload file
       uses: appleboy/scp-action@master
       with:
-        host: ${{ secrets.SSH_IP }}
-        username: ${{ secrets.SSH_ID }}
+        host: ${{  '103.218.159.135'}}
+        username: ${{ 'nhnacademy' }}
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         source: "target/*.jar"
