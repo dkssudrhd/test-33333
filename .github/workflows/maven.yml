@@ -31,10 +31,10 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name : Run SonarQube
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST }}
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=test-33333 -Dsonar.projectName='test-33333'
+      run:  -Dsonar.projectKey=test-33333 
+            -Dsonar.projectName='test-33333' 
+            -Dsonar.host.url=http://133.186.241.167:9000
+            -Dsonar.token=sqp_94776d396d32e945914cfb9e43035db3bd0a685a
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
