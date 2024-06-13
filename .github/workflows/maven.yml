@@ -41,8 +41,8 @@ jobs:
       with:
         host: ${{  '103.218.159.135'}}
         username: ${{ 'nhnacademy' }}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+        key: ${{ 'private key, github_rsa' }}
+        port: ${{ '22' }}
         source: "target/*.jar"
         target: "~/"
         rm: false
@@ -50,9 +50,9 @@ jobs:
     - name: execute shell script
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ '103.218.159.135' }}
-        username: ${{ 'nhnacademy'}}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+        host: ${{  '103.218.159.135'}}
+        username: ${{ 'nhnacademy' }}
+        key: ${{ 'private key, github_rsa' }}
+        port: ${{ 22 }}
         script_stop: true
         script: "./startup.sh"
