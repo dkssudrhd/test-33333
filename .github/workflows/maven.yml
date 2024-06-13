@@ -42,7 +42,7 @@ jobs:
         host: ${{  '103.218.159.135'}}
         username: ${{ 'nhnacademy' }}
         key: ${{ 'private key, github_rsa' }}
-        port: ${{ '22' }}
+        port: ${{ 22 }}
         source: "target/*.jar"
         target: "~/"
         rm: false
